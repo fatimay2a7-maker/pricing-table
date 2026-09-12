@@ -1,0 +1,425 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #121827;
+  background: #fff;
+}
+
+/* =========================
+       Header
+    ========================= */
+
+.hero {
+  height: 196px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* dotted background */
+  background-image: url(../resources/bg-pattern.png);
+  background-color: #f8fafc;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.hero h1 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.hero p {
+  max-width: 520px;
+  font-size: 16px;
+  line-height: 1.45;
+  color: #535b68;
+}
+
+/* =========================
+       Pricing Section
+    ========================= */
+
+.pricing-section {
+  max-width: 1140px;
+  margin: 60px auto 30px;
+  padding: 0 20px;
+}
+
+.pricing-table {
+  display: grid;
+  grid-template-columns: 215px repeat(4, 1fr);
+  align-items: stretch;
+}
+
+/* =========================
+       Feature Names
+    ========================= */
+
+.features {
+  padding-top: 208px;
+}
+
+.feature {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+
+  background: #f8f9fb;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.feature:first-child {
+  border-radius: 15px 0 0 0;
+}
+
+.feature:last-child {
+  border-radius: 0 0 0 15px;
+}
+
+.feature strong {
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* =========================
+       Plans
+    ========================= */
+
+.plan {
+  text-align: center;
+  position: relative;
+  min-width: 0;
+}
+
+.plan-header {
+  height: 208px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plan-name {
+  color: #2949b9;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  margin-top: 10px;
+}
+
+.price {
+  font-size: 66px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -2px;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.period {
+  color: #555d6b;
+  font-size: 16px;
+}
+
+/* =========================
+       Plan Rows
+    ========================= */
+
+.plan-row {
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 14px;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.check {
+  font-size: 19px;
+  font-weight: 400;
+}
+
+.dash {
+  color: #333;
+}
+
+/* =========================
+       Popular Plan
+    ========================= */
+
+.popular {
+  background: #121a2a;
+  color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.popular .plan-header {
+  height: 208px;
+}
+
+.popular .plan-name {
+  background: #2e4fbd;
+  color: white;
+  padding: 4px 13px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 17px;
+}
+
+.popular .price {
+  color: #fff;
+}
+
+.popular .period {
+  color: #fff;
+}
+
+.popular .plan-row {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =========================
+       Buttons
+    ========================= */
+
+.button-row {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  color: #2949b9;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  transition: opacity 0.2s;
+}
+
+.button:hover {
+  opacity: 0.7;
+}
+
+.popular .button-row {
+  background: #955b1a;
+}
+
+.popular .button {
+  color: #fff;
+}
+
+/* =========================
+       Responsive
+    ========================= */
+
+@media (max-width: 600px) {
+  .hero {
+    height: 196px;
+    padding: 0 15px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+    max-width: 390px;
+  }
+
+  .pricing-section {
+    width: 100%;
+    margin: 26px auto 30px;
+    padding: 0 26px;
+  }
+
+  .pricing-table {
+    width: 100%;
+    min-width: 0;
+    grid-template-columns: 100px 1fr 1fr;
+  }
+
+  /* مخفی کردن Free و Team */
+  .Free,
+  .Team {
+    display: none;
+  }
+
+  /* ستون ویژگی‌ها */
+  .features {
+    grid-column: 1;
+    padding-top: 157px;
+    min-width: 0;
+  }
+
+  .feature {
+    height: 52px;
+    padding: 0 12px;
+    min-width: 0;
+  }
+
+  .feature strong {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Enterprise */
+  .Enterprise {
+    grid-column: 2;
+    grid-row: 1/2;
+  }
+
+  /* Popular */
+  .popular {
+    grid-column: 3;
+  }
+
+  /* هدر پلن‌ها */
+  .plan-header,
+  .popular .plan-header {
+    height: 157px;
+  }
+
+  .plan-name {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .price {
+    font-size: 36px;
+    letter-spacing: -1px;
+    margin-bottom: 9px;
+  }
+
+  .period {
+    font-size: 15px;
+  }
+
+  /* Popular badge */
+  .popular .plan-name {
+    margin-top: 14px;
+    margin-bottom: 14px;
+    padding: 3px 12px;
+    font-size: 15px;
+  }
+
+  /* ردیف‌ها */
+  .plan-row {
+    height: 52px;
+    font-size: 14px;
+  }
+
+  /* دکمه */
+  .button-row {
+    height: 72px;
+  }
+
+  .button {
+    font-size: 15px;
+  }
+}
+/* =========================
+   TABLET RESPONSIVE
+   601px - 1100px
+========================= */
+
+@media (min-width: 601px) and (max-width: 1100px) {
+  .pricing-section {
+    width: 100%;
+    max-width: 920px;
+    margin: 60px auto 30px;
+    padding: 0;
+  }
+
+  .pricing-table {
+    width: 100%;
+    min-width: 0;
+
+    /* Features | Team | Popular | Enterprise */
+    grid-template-columns:
+      215px
+      repeat(3, 1fr);
+  }
+
+  /* -------------------------
+     Hide Free
+  ------------------------- */
+
+  .Free {
+    display: none;
+  }
+
+  /* -------------------------
+     Features
+  ------------------------- */
+
+  .features {
+    grid-column: 1;
+    padding-top: 208px;
+    min-width: 0;
+  }
+
+  /* -------------------------
+     Team
+  ------------------------- */
+
+  .Team {
+    grid-column: 2;
+  }
+
+  /* -------------------------
+     Popular
+  ------------------------- */
+
+  .popular {
+    grid-column: 3;
+  }
+
+  /* -------------------------
+     Enterprise
+  ------------------------- */
+
+  .enterprise {
+    grid-column: 4;
+  }
+
+  /* -------------------------
+     Plan header
+  ------------------------- */
+
+  .plan-header,
+  .popular .plan-header {
+    height: 208px;
+  }
+
+  /* -------------------------
+     Price
+  ------------------------- */
+
+  .price {
+    font-size: 66px;
+  }
+
+  /* -------------------------
+     Feature text
+  ------------------------- */
+
+  .feature strong {
+    white-space: nowrap;
+  }
+}
